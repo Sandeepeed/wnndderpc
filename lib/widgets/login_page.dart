@@ -1,5 +1,4 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
@@ -35,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 40,left: 5),
+                padding: const EdgeInsets.only(top: 40,left: 5),
                 child: AnimatedTextKit(
                   animatedTexts: [
                     ColorizeAnimatedText("WNNDERPC",
@@ -55,12 +54,12 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 app_large_text(text: 'Sign Up To Get Started', color: AppColours.green,size: 20,),
                 Container(
-                  margin: EdgeInsets.only(top: 50),
+                  margin: const EdgeInsets.only(top: 50),
                   height: MediaQuery.of(context).size.width * 0.7,
                   width: MediaQuery.of(context).size.height*1,
                   child: Lottie.asset("assets/developer.json"),
                 ),
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       primary: AppColours.green,
@@ -71,12 +70,12 @@ class _LoginPageState extends State<LoginPage> {
                           Provider.of<GoogleSignInProvider>(context,listen:false);
                           provider.googleLogin();
                     },
-                    icon: FaIcon(FontAwesomeIcons.google,),
-                    label: Text("Sign Up using Google",style: TextStyle(
+                    icon: const FaIcon(FontAwesomeIcons.google,),
+                    label: const Text("Sign Up using Google",style: TextStyle(
                       color: AppColours.blue,
                       fontWeight: FontWeight.bold,
                     ),)),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
@@ -87,8 +86,8 @@ class _LoginPageState extends State<LoginPage> {
                       //   provider.googleLogin();
                       //
                     },
-                    icon: FaIcon(FontAwesomeIcons.apple,color: Colors.black,),
-                    label: Text("Sign Up using Apple ID",
+                    icon: const FaIcon(FontAwesomeIcons.apple,color: Colors.black,),
+                    label: const Text("Sign Up using Apple ID",
                     style: TextStyle(
                       color: AppColours.blue,
                       fontWeight: FontWeight.bold,

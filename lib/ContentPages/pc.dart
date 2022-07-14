@@ -15,7 +15,6 @@ class MainPC extends StatefulWidget {
 class _LaptopsState extends State<MainPC> {
   List pages = [
     const PC(),
-    const ComparePC(name: '', stars: '', image: '', grcard: '', mem: '', memtype: '', proccesor: '', ram: '', price: ''),
     const CartPC(),
   ];
   int currentIndex = 0;
@@ -42,7 +41,6 @@ class _LaptopsState extends State<MainPC> {
         elevation: 0,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.compare_arrows), label: "Compare"),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),
         ],
       ),
